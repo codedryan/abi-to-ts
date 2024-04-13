@@ -1,0 +1,32 @@
+{
+  "name": "abi-to-ts",
+  "description": "Regenerate the smart contract compiled json file into a ts file in order to prompt for ABI methods and parameter types",
+  "version": "0.0.1-beta.3",
+  "license": "MIT",
+  "main": "index.js",
+  "author": "Ryan Wang",
+  "bin": {
+    "abi-to-ts": "./index.js"
+  },
+  "files": [
+    "index.js",
+    "dir.js"
+  ],
+  "dependencies": {
+    "commander": "^11.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/codedryan/abi-to-ts.git"
+  },
+  "bugs": {
+    "url": "https://github.com/codedryan/abi-to-ts/issues"
+  },
+  "keywords": [
+    "wagmi",
+    "json",
+    "abi",
+    "dapps",
+    "contract"
+  ]
+}
