@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 
 const fs = require("fs");
 const path = require("path");
@@ -40,7 +40,4 @@ function rmdir(dir) {
   }
 }
 
-module.exports = {
-  mkdir,
-  rmdir,
-};
+module.exports = { mkdir, rmdir };

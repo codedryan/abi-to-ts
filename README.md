@@ -7,9 +7,9 @@ Regenerate the smart contract compiled json file into a ts file in order to prom
 ## Installation
 
 ```bash
-npm i -g abi-to-ts
+npm install -g abi-to-ts
 # or
-pnpm add -g abi-to-ts
+pnpm install -g abi-to-ts
 # or
 yarn global add abi-to-ts
 ```
@@ -23,6 +23,7 @@ Options:
   -i, --input-dir  <path> (optional) Entry directory, defaults to ./contracts
   -o, --output-dir <path> (optional) Output directory, defaults to ./src/constants/contracts
   --networkId <networkId> (optional) Specify network ID
+  --hasNetworks           (optional) Skip json with empty networks
   --only-abi              (optional) Export abi only
   --only-address          (optional) If '--networkId' is specified, the address will be exported, otherwise the networks will be exported
   -h, --help              display help for command
