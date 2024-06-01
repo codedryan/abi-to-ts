@@ -1,8 +1,10 @@
 "use strict";
 
+const { getAddress } = require("viem");
+
 function formatNetworks(networks) {
   return Object.keys(networks ?? {}).reduce((prev, cur) => {
-    prev[cur] = { address: networks[cur].address };
+    prev[cur] = { address: getAddress(networks[cur].address) };
 
     return prev;
   }, {});

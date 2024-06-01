@@ -14,7 +14,8 @@
     "utils"
   ],
   "dependencies": {
-    "commander": "^11.0.0"
+    "commander": "^11.0.0",
+    "viem": "^2.13.3"
   },
   "repository": {
     "type": "git",
