@@ -24,7 +24,7 @@ Options:
   -o, --output-dir <path> (optional) Output directory, defaults to ./src/constants/contracts
   --networkId <networkId> (optional) Specify network ID
   --hasNetworks           (optional) Skip json with empty networks
-  --only-abi              (optional) Export abi only
-  --only-address          (optional) If '--networkId' is specified, the address will be exported, otherwise the networks will be exported
+  --onlyAbi              (optional) Export abi only
+  --onlyAddress          (optional) If '--networkId' is specified, the address will be exported, otherwise the networks will be exported
   -h, --help              display help for command
 ```
