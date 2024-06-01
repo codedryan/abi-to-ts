@@ -5,7 +5,7 @@
 const fs = require("fs");
 
 const options = require("./src/commands");
-const writeTsSync = require("./src/writeTsSync");
+const abiToTs = require("./src/abiToTs");
 const { mkdir, rmdir } = require("./utils/dir");
 
 try {
@@ -16,6 +16,6 @@ try {
   mkdir(options.outputDir);
 }
 
-writeTsSync(options);
+abiToTs(options);
 
 console.log("json to ts success!");

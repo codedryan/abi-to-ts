@@ -1,7 +1,7 @@
 {
   "name": "abi-to-ts",
   "description": "Regenerate the smart contract compiled json file into a ts file in order to prompt for ABI methods and parameter types",
-  "version": "0.0.2-beta",
+  "version": "0.0.2-patch",
   "license": "MIT",
   "main": "index.js",
   "author": "Ryan Wang",

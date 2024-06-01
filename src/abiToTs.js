@@ -15,8 +15,16 @@ module.exports = (options) => {
     const jsonData = require(`${inputDir}/${dir[i]}`);
     const networksId = Object.keys(jsonData.networks ?? {});
 
-    if ((hasNetworks || onlyAddress) && networksId.length === 0) continue;
-    if (networkId && !networksId.includes(networkId)) continue;
+    if (
+      // invalid networks
+      ((hasNetworks || onlyAddress) && networksId.length === 0) ||
+      // invalid abi
+      (onlyAbi && (!jsonData.abi || jsonData.abi.length === 0)) ||
+      // invalid network ID
+      (networkId && !networksId.includes(networkId))
+    ) {
+      continue;
+    }
 
     const abi = formatAbi(jsonData);
     const networks = formatNetworks(jsonData.networks);

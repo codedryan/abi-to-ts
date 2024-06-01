@@ -9,7 +9,7 @@ function formatNetworks(networks) {
 }
 
 function formatAbi(json) {
-  return json.abi.map((abiItem) => {
+  return (json.abi ?? []).map((abiItem) => {
     if (abiItem.inputs) {
       for (let i = 0; i < abiItem.inputs.length; i++) {
         if (abiItem.inputs[i].internalType) {
