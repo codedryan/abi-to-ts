@@ -12,11 +12,11 @@ importers:
         specifier: ^1.0.2
         version: 1.0.2
       commander:
-        specifier: ^11.0.0
-        version: 11.1.0
+        specifier: ^12.1.0
+        version: 12.1.0
       viem:
-        specifier: ^2.13.3
-        version: 2.13.6
+        specifier: ^2.13.7
+        version: 2.13.7
 
 packages:
 
@@ -61,17 +61,17 @@ packages:
       zod:
         optional: true
 
-  commander@11.1.0:
-    resolution: {integrity: sha512-yPVavfyCcRhmorC7rWlkHn15b4wDVgVmBA7kV4QVBsF7kv/9TKJAbAXVTxvTnwP8HHKjRCJDClKbciiYS7p0DQ==}
-    engines: {node: '>=16'}
+  commander@12.1.0:
+    resolution: {integrity: sha512-Vw8qHK3bZM9y/P10u3Vib8o/DdkvA2OtPtZvD871QKjy74Wj1WSKFILMPRPSdUSx5RFK1arlJzEtA4PkFgnbuA==}
+    engines: {node: '>=18'}
 
   isows@1.0.4:
     resolution: {integrity: sha512-hEzjY+x9u9hPmBom9IIAqdJCwNLax+xrPb51vEPpERoFlIxgmZcHzsT5jKG06nvInKOBGvReAVz80Umed5CczQ==}
     peerDependencies:
       ws: '*'
 
-  viem@2.13.6:
-    resolution: {integrity: sha512-BhvYhLrExC9P4AH9Gu/2A3VPUFkJT/ayH+A9anco2Ja/D0h3NStq+2uF4htcly1e68/U7IOrlCyX3Jz9zqeEJA==}
+  viem@2.13.7:
+    resolution: {integrity: sha512-SZWn9LPrz40PHl4PM2iwkPTTtjWPDFsnLr32UwpqC/Z5f0AwxitjLyZdDKcImvbWZ3vLQ0oPggR1aLlqvTcUug==}
     peerDependencies:
       typescript: '>=5.0.4'
     peerDependenciesMeta:
@@ -117,13 +117,13 @@ snapshots:
 
   abitype@1.0.2: {}
 
-  commander@11.1.0: {}
+  commander@12.1.0: {}
 
   isows@1.0.4(ws@8.13.0):
     dependencies:
       ws: 8.13.0
 
-  viem@2.13.6:
+  viem@2.13.7:
     dependencies:
       '@adraffy/ens-normalize': 1.10.0
       '@noble/curves': 1.2.0

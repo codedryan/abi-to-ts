@@ -2,20 +2,24 @@
 
 "use strict";
 
-const fs = require("fs");
+const { exit, versions } = require("node:process");
+const { error } = require("node:console");
 
-const options = require("./src/commands");
-const abiToTs = require("./src/abiToTs");
-const { mkdir, rmdir } = require("./utils/dir");
+const currentNodeVersion = versions.node;
+const semver = currentNodeVersion.split(".");
+const major = semver[0];
 
-try {
-  fs.readdirSync(options.outputDir);
-  rmdir(options.outputDir);
-  throw new Error();
-} catch (error) {
-  mkdir(options.outputDir);
+if (major < 14) {
+  error(
+    "You are running Node " +
+      currentNodeVersion +
+      ".\n" +
+      "abi-to-ts requires Node 14 or higher. \n" +
+      "Please update your version of Node."
+  );
+  exit(1);
 }
 
-abiToTs(options);
+const { init } = require("./abiToTs");
 
-console.log("json to ts success!");
+init();

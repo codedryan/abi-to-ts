@@ -1,15 +1,15 @@
 # abi-to-ts
 
-Regenerate the smart contract compiled json file into a ts file in order to prompt for ABI methods and parameter types.
+Create typescript file from contract json.
 
-**Note:** Known to work when using wagmi as a development tool.
+**Note:** Currently available for wagmi.
 
 ## Installation
 
 ```bash
 npm install -g abi-to-ts
 # or
-pnpm install -g abi-to-ts
+pnpm add -g abi-to-ts
 # or
 yarn global add abi-to-ts
 ```
@@ -19,12 +19,14 @@ yarn global add abi-to-ts
 ```sh
 Usage: abi-to-ts [options]
 
+Create typescript file from contract json.
+
 Options:
-  -i, --input-dir  <path> (optional) Entry directory, defaults to ./contracts
-  -o, --output-dir <path> (optional) Output directory, defaults to ./src/constants/contracts
-  --networkId <networkId> (optional) Specify network ID
-  --hasNetworks           (optional) Skip json with empty networks
-  --onlyAbi              (optional) Export abi only
-  --onlyAddress          (optional) If '--networkId' is specified, the address will be exported, otherwise the networks will be exported
-  -h, --help              display help for command
+  -V, --version              output the version number
+  -r, --read-dir <path>      read directory (default: "./contracts")
+  -w, --write-dir <path>     write directory (default: "./src/constants/contracts")
+  -n, --network-id <number>  network ID [none]
+                             read only files with this network ID
+  --networks                 only read files where "networks" is not empty
+  -h, --help                 display help for command
 ```
